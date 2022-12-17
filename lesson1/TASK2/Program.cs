@@ -6,7 +6,10 @@ int b = int.Parse(Console.ReadLine() ?? "0");
 if (a > b) {
     Console.WriteLine($"Наибольшее число {a}");
 }
-else 
+else if (b > a){
     Console.WriteLine($"Наибольшее число {b}");
+}
+else 
+	Console.WriteLine($"Числа равны");
 
 

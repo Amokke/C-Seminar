@@ -1,7 +1,7 @@
 ﻿Console.WriteLine("Введите трехзначное число: ");
 int a = int.Parse(Console.ReadLine() ?? "0");
 
-int ParsFirstNumber(int a)
+int ParsNumber(int a)
 {
     int number = a/10;
     int number2 = number%10;
@@ -9,7 +9,7 @@ int ParsFirstNumber(int a)
 }
 
 if (a < 1000 && a > 99){
-    int result = ParsFirstNumber(a);
+    int result = ParsNumber(a);
     Console.WriteLine($"Вторая цифра: {result}");
 }
 else

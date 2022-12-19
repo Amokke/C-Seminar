@@ -1,7 +1,7 @@
 ﻿Console.WriteLine("Введите число: ");
 int a = int.Parse(Console.ReadLine() ?? "0");
 
-int ParsFirstNumber(int a)
+int ParsNumber(int a)
 {
     int number = a/100;
     int number2 = number%10;
@@ -9,7 +9,7 @@ int ParsFirstNumber(int a)
 }
 
 if (a > 99){
-    int result = ParsFirstNumber(a);
+    int result = ParsNumber(a);
     Console.WriteLine($"Третья цифра: {result}");
 }
 else

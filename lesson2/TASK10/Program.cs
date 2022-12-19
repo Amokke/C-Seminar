@@ -10,7 +10,7 @@ int ParsFirstNumber(int a)
 
 if (a < 1000 && a > 99){
     int result = ParsFirstNumber(a);
-    Console.WriteLine($"Вторая цыфра: {result}");
+    Console.WriteLine($"Вторая цифра: {result}");
 }
 else
     Console.WriteLine($"Введено не трехзначное число");

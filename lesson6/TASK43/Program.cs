@@ -33,4 +33,4 @@ double k1 = GetNumber("Введите вторую точку, первой пр
 double b2 = GetNumber("Введите первую точку, второй прямой");
 double k2 = GetNumber("Введите вторую точку, второй прямой");
 (double x, double y) = MinMaxNumbers(b1,k1,b2,k2);
-Console.WriteLine($"Линии пересекутся в точке [{x} ; {y}]");
+Console.WriteLine($"Линии пересекутся в точке [{Math.Round(x,2)} ; {Math.Round(y,2)}]");

@@ -21,4 +21,3 @@ int[] Array(string data)
 string data = GetString("Введите 8 чисел через запятую");
 Console.Write("Элименты введенного массива:");
 Array(data);
-

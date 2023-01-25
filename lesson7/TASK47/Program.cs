@@ -20,7 +20,7 @@
 }
 
 
-double[,] InitArray(int row, int column, int leftBound, int rightBound)
+double[,] InitArray(int rows, int columns, int leftBound, int rightBound)
 {
     double[,] result = new double[row, column];
     Random rnd = new Random();

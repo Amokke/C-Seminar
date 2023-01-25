@@ -63,6 +63,5 @@ int leftBound = 1;
 int rightBound = 9;
 
 int[,] arr = InitArray(rows, columns, leftBound, rightBound);
-
 PrintArray(arr);
 FindIndex(arr, row, column);

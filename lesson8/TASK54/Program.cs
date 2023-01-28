@@ -19,22 +19,20 @@
     return result;
 }
 
-
-double[,] InitArray(int row, int column, int leftBound, int rightBound)
+int[,] InitArray(int rows, int columns, int leftBound, int rightBound)
 {
-    double[,] result = new double[row, column];
+    int[,] result = new int[rows, columns];
     Random rnd = new Random();
 
-    for (int i = 0; i < row; i++)
+    for (int i = 0; i < rows; i++)
     {
-        for (int j = 0; j < column; j++)
-            result[i, j] = Math.Round(rnd.Next(leftBound, rightBound) + rnd.NextDouble(), 1);
+        for (int j = 0; j < columns; j++)
+            result[i, j] = rnd.Next(leftBound, rightBound);
     }
     return result;
 }
 
-//метод для печати массива
-void PrintArray(double[,] array)
+void PrintArray(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
@@ -44,15 +42,35 @@ void PrintArray(double[,] array)
         }
         Console.WriteLine();
     }
-}    
+}
 
-
-
+void SortArray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            for (int k = 0; k < array.GetLength(1) - 1; k++)
+            {
+                if (array[i, k] < array[i, k + 1])
+                {
+                    int temp = array[i, k + 1];
+                    array[i, k + 1] = array[i, k];
+                    array[i, k] = temp;
+                }
+            }
+        }
+    }
+}
 
 int rows = GetNumber("Введите количество строк массива");
 int columns = GetNumber("Введите количество столбцов массива");
 int leftBound = GetNumber("Введите левую границу значений");
 int rightBound = GetNumber("Введите правую границу значений");
-double[,] arr = InitArray(rows, columns, leftBound, rightBound);
 
+int[,] arr = InitArray(rows, columns, leftBound, rightBound);
+
+PrintArray(arr);
+SortArray(arr);
+Console.WriteLine();
 PrintArray(arr);
